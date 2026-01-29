@@ -10,6 +10,7 @@ app.add_middleware(
     allow_origins=[
         "https://ai-text-summarize-frontend-bolf6y7n1-mouad-makkours-projects.vercel.app",
         "*.vercel.app",
+        "*"
     ],
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS", "HEAD"],
