@@ -9,13 +9,12 @@ app.add_middleware(
     allow_origins=[
         "https://ai-text-summarize-frontend-bolf6y7n1-mouad-makkours-projects.vercel.app",
     ],
-    allow_credentials=False,  # 👈 IMPORTANT
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-
-app.include_router(summarize_router)
+app.include_router(summarize_router, prefix="/summarize")
 
 @app.get("/")
 def health_check():
