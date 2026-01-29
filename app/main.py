@@ -8,9 +8,8 @@ app = FastAPI(title="AI Text Summarizer API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "https://ai-text-summarize-frontend-bolf6y7n1-mouad-makkours-projects.vercel.app",
-        "*.vercel.app",
-        "*"
+        "https://ai-text-summarize-frontend-bcr0wx3hs-mouad-makkours-projects.vercel.app"
+        
     ],
     allow_credentials=False,
     allow_methods=["GET", "POST", "OPTIONS", "HEAD"],
