@@ -14,6 +14,10 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+@app.options("/{path:path}")
+def options_handler(path: str):
+    return Response(status_code=200)
+
 app.include_router(summarize_router, prefix="/summarize")
 
 @app.get("/")
